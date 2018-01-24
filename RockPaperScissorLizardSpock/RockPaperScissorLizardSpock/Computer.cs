@@ -15,7 +15,26 @@ namespace RockPaperScissorLizardSpock
         }
         public override void ChooseWeapon()
         {
-            throw new NotImplementedException();
+            Random randomNumber = new Random();
+            int selector = randomNumber.Next(1, 6);
+            switch (selector)
+            {
+                case 1:
+                    currentSelection = "rock";
+                    break;
+                case 2:
+                    currentSelection = "paper";
+                    break;
+                case 3:
+                    currentSelection = "scissors";
+                    break;
+                case 4:
+                    currentSelection = "lizzard";
+                    break;
+                case 5:
+                    currentSelection = "spock";
+                    break;
+            }
         }
     }
 }

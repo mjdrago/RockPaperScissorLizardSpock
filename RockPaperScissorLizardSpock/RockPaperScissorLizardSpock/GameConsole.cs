@@ -15,21 +15,21 @@ namespace RockPaperScissorLizardSpock
             Console.WriteLine("Is this a two-player or one-player game? \n" +
                               "Please enter '1' for one-player game or '2' for a two-player game.");
             char selection = char.Parse(Console.ReadLine());
-
             switch (selection)
             {
                 case '1':
-                    player1 = new Player("yes");
-                    player2 = new Player("no");
+                    player1 = new Human();
+                    player2 = new Computer();
                     break;
                 case '2':
-                    player1 = new Player("yes");
-                    player2 = new Player("yes");
+                    player1 = new Human();
+                    player2 = new Human();
                     break;
                 default:
                     Console.WriteLine("Invalid choice selected. Please try again");
                     break;
             }
         }
+
     }
 }

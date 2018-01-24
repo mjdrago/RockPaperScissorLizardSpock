@@ -1,1 +1,6 @@
 C:\Users\mario\Documents\devCodeCamp\Projects\4 - Rock Paper Scissor Lizard Spock\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.exe.config
+C:\Users\mario\Documents\devCodeCamp\Projects\4 - Rock Paper Scissor Lizard Spock\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.exe
+C:\Users\mario\Documents\devCodeCamp\Projects\4 - Rock Paper Scissor Lizard Spock\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.pdb
+C:\Users\mario\Documents\devCodeCamp\Projects\4 - Rock Paper Scissor Lizard Spock\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\obj\Debug\RockPaperScissorLizardSpock.csprojResolveAssemblyReference.cache
+C:\Users\mario\Documents\devCodeCamp\Projects\4 - Rock Paper Scissor Lizard Spock\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\obj\Debug\RockPaperScissorLizardSpock.exe
+C:\Users\mario\Documents\devCodeCamp\Projects\4 - Rock Paper Scissor Lizard Spock\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\obj\Debug\RockPaperScissorLizardSpock.pdb

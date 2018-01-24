@@ -10,6 +10,8 @@ namespace RockPaperScissorLizardSpock
     {
         static void Main(string[] args)
         {
+            GameConsole game = new GameConsole();
+            game.player2.ChooseWeapon();
         }
     }
 }

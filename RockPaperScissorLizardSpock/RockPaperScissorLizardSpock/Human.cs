@@ -15,7 +15,12 @@ namespace RockPaperScissorLizardSpock
         }
         public override void ChooseWeapon()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Enter your weapon: \n" +
+                              " - rock \n" +
+                              " - paper \n" +
+                              " - scissors \n" +
+                              " - lizard \n" +
+                              " - spock \n");
         }
     }
 }
