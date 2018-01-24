@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorLizardSpock
 {
-    class Player
+    public abstract class Player
     {
-        string isHuman;
-        string currentSelection;
-        string[] roundResults = new string[3];
+        public string typeOfPlayer;
+        public string currentSelection;
+        public int numberOfWins;
 
-        public Player(string isHuman)
-        {
-            this.isHuman = isHuman;
-        }
+        public abstract void ChooseWeapon();
     }
 }
