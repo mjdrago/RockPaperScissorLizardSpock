@@ -8,8 +8,9 @@ namespace RockPaperScissorLizardSpock
 {
     public abstract class Player
     {
+        public string name;
         public string typeOfPlayer;
-        public string currentSelection;
+        public int currentSelection;
         public int numberOfWins;
 
         public abstract void ChooseWeapon();

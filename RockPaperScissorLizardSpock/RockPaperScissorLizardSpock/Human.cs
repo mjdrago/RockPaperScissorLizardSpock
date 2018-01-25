@@ -8,19 +8,21 @@ namespace RockPaperScissorLizardSpock
 {
     class Human : Player
     {
-        public Human()
+        public Human(string name)
         {
+            this.name = name;
             this.typeOfPlayer = "human";
             this.numberOfWins = 0;
         }
         public override void ChooseWeapon()
         {
-            Console.WriteLine("Enter your weapon: \n" +
-                              " - rock \n" +
-                              " - paper \n" +
-                              " - scissors \n" +
-                              " - lizard \n" +
-                              " - spock \n");
+            Console.WriteLine("Choose your weapon (Enter the number in parenthesis): \n" +
+                              " - Rock (1) \n" +
+                              " - Paper (2) \n" +
+                              " - Scissors (3) \n" +
+                              " - Lizard (4) \n" +
+                              " - Spock (5) \n");
+            currentSelection = int.Parse(Console.ReadLine());
         }
     }
 }
