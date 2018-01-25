@@ -22,7 +22,30 @@ namespace RockPaperScissorLizardSpock
                               " - Scissors (3) \n" +
                               " - Lizard (4) \n" +
                               " - Spock (5) \n",name);
-            currentSelection = int.Parse(Console.ReadLine());
+            int input =  int.Parse(Console.ReadLine());
+
+            switch (input)
+            {
+                case 1:
+                    currentSelection = input;
+                    break;
+                case 2:
+                    currentSelection = input;
+                    break;
+                case 3:
+                    currentSelection = input;
+                    break;
+                case 4:
+                    currentSelection = input;
+                    break;
+                case 5:
+                    currentSelection = input;
+                    break;
+                default:
+                    Console.WriteLine("Not a valid option. Please try again.");
+                    ChooseWeapon();
+                    break;
+            }
         }
     }
 }
