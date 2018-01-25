@@ -16,12 +16,12 @@ namespace RockPaperScissorLizardSpock
         }
         public override void ChooseWeapon()
         {
-            Console.WriteLine("Choose your weapon (Enter the number in parenthesis): \n" +
+            Console.WriteLine("{0} choose your weapon (Enter the number in parenthesis): \n" +
                               " - Rock (1) \n" +
                               " - Paper (2) \n" +
                               " - Scissors (3) \n" +
                               " - Lizard (4) \n" +
-                              " - Spock (5) \n");
+                              " - Spock (5) \n",name);
             currentSelection = int.Parse(Console.ReadLine());
         }
     }
