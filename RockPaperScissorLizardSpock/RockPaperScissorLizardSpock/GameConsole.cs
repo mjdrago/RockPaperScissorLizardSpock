@@ -91,7 +91,8 @@ namespace RockPaperScissorLizardSpock
                 player2.numberOfWins++;
             }
         }
-        public void DetermineGameWinner(Player winner,Player loser)
+
+        public void DisplayGameWinner(Player winner,Player loser)
         {
             if (winner.typeOfPlayer == "computer")
             {
@@ -102,6 +103,18 @@ namespace RockPaperScissorLizardSpock
                 Console.WriteLine("{0} you won the game!",winner.name);
             }
         }
+        public void DetermineGameWinner()
+        {
+            if (player1.numberOfWins == 2)
+            {
+                DisplayGameWinner(player1, player2);
+            }
+            else
+            {
+                DisplayGameWinner(player2, player1);
+            }
+        }
+
         public void PlayGame()
         {
             GetNumberOfPlayers();
@@ -119,14 +132,8 @@ namespace RockPaperScissorLizardSpock
                     CompareWeapons();
                 }
             }
-            if (player1.numberOfWins ==2)
-            {
-                DetermineGameWinner(player1, player2);
-            }
-            else
-            {
-                DetermineGameWinner(player2, player1);
-            }
+            DetermineGameWinner();
+
         }
     }
 }
