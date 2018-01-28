@@ -11,12 +11,12 @@ namespace RockPaperScissorLizardSpock
         public Computer()
         {
             this.typeOfPlayer = "computer";
-            this.numberOfWins = 0;
+            this.numberOfRoundWins = 0;
         }
         public override void ChooseWeapon()
         {
             Random randomNumber = new Random();
-            currentSelection = randomNumber.Next(1, 6);
+            currentSelection = randomNumber.Next(0, 5);
         }
     }
 }

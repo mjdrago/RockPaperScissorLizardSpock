@@ -14,14 +14,14 @@ namespace RockPaperScissorLizardSpock
         {
             Console.WriteLine("Is this a two-player or one-player game? \n" +
                               "Please enter '1' for one-player game or '2' for a two-player game.");
-            char selection = char.Parse(Console.ReadLine());
+            string selection = Console.ReadLine();
             switch (selection)
             {
-                case '1':
+                case "1":
                     player1 = new Human("Player One");
                     player2 = new Computer();
                     break;
-                case '2':
+                case "2":
                     player1 = new Human("Player One");
                     player2 = new Human("Player Two");
                     break;
@@ -60,36 +60,48 @@ namespace RockPaperScissorLizardSpock
         }
         public void CompareWeapons()
         {
-            if (player1.currentSelection == 1 && (player2.currentSelection == 3|| player2.currentSelection == 4))
-            {
-                DeclareRoundWinner(player1,player2);
-                player1.numberOfWins++;
-            }
-            else if (player1.currentSelection == 2 && (player2.currentSelection == 1 || player2.currentSelection == 5))
+            int numberOfWeapons = 5;
+            int decisionModulus = ((numberOfWeapons + player1.currentSelection - player2.currentSelection) % 5) % 2;
+            if (decisionModulus == 0)
             {
                 DeclareRoundWinner(player1, player2);
-                player1.numberOfWins++;
-            }
-            else if (player1.currentSelection == 3 && (player2.currentSelection == 2 || player2.currentSelection == 4))
-            {
-                DeclareRoundWinner(player1, player2);
-                player1.numberOfWins++;
-            }
-            else if (player1.currentSelection == 4 && (player2.currentSelection == 5 || player2.currentSelection == 2))
-            {
-                DeclareRoundWinner(player1, player2);
-                player1.numberOfWins++;
-            }
-            else if (player1.currentSelection == 5 && (player2.currentSelection == 3 || player2.currentSelection == 1))
-            {
-                DeclareRoundWinner(player1, player2);
-                player1.numberOfWins++;
+                player1.numberOfRoundWins++;
             }
             else
             {
                 DeclareRoundWinner(player2, player1);
-                player2.numberOfWins++;
+                player2.numberOfRoundWins++;
             }
+            //if (player1.currentSelection == 1 && (player2.currentSelection == 3|| player2.currentSelection == 4))
+            //{
+            //    DeclareRoundWinner(player1,player2);
+            //    player1.numberOfWins++;
+            //}
+            //else if (player1.currentSelection == 2 && (player2.currentSelection == 1 || player2.currentSelection == 5))
+            //{
+            //    DeclareRoundWinner(player1, player2);
+            //    player1.numberOfWins++;
+            //}
+            //else if (player1.currentSelection == 3 && (player2.currentSelection == 2 || player2.currentSelection == 4))
+            //{
+            //    DeclareRoundWinner(player1, player2);
+            //    player1.numberOfWins++;
+            //}
+            //else if (player1.currentSelection == 4 && (player2.currentSelection == 5 || player2.currentSelection == 2))
+            //{
+            //    DeclareRoundWinner(player1, player2);
+            //    player1.numberOfWins++;
+            //}
+            //else if (player1.currentSelection == 5 && (player2.currentSelection == 3 || player2.currentSelection == 1))
+            //{
+            //    DeclareRoundWinner(player1, player2);
+            //    player1.numberOfWins++;
+            //}
+            //else
+            //{
+            //    DeclareRoundWinner(player2, player1);
+            //    player2.numberOfWins++;
+            //}
         }
 
         public void DisplayGameWinner(Player winner,Player loser)
@@ -105,7 +117,7 @@ namespace RockPaperScissorLizardSpock
         }
         public void DetermineGameWinner()
         {
-            if (player1.numberOfWins == 2)
+            if (player1.numberOfRoundWins == 2)
             {
                 DisplayGameWinner(player1, player2);
             }
@@ -135,7 +147,7 @@ namespace RockPaperScissorLizardSpock
         {
             GetNumberOfPlayers();
             DisplayRules();
-            while (player1.numberOfWins != 2 && player2.numberOfWins != 2)
+            while (player1.numberOfRoundWins != 2 && player2.numberOfRoundWins != 2)
             {
                 player1.ChooseWeapon();
                 player2.ChooseWeapon();

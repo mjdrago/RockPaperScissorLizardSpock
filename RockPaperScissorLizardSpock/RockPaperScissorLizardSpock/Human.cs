@@ -12,34 +12,34 @@ namespace RockPaperScissorLizardSpock
         {
             this.name = name;
             this.typeOfPlayer = "human";
-            this.numberOfWins = 0;
+            this.numberOfRoundWins = 0;
         }
         public override void ChooseWeapon()
         {
             Console.WriteLine("{0} choose your weapon (Enter the number in parenthesis): \n" +
-                              " - Rock (1) \n" +
+                              " - Scissors (1) \n" +
                               " - Paper (2) \n" +
-                              " - Scissors (3) \n" +
+                              " - Rock (3) \n" +
                               " - Lizard (4) \n" +
-                              " - Spock (5) \n",name);
+                              " - Spock (5)",name);
             int input =  int.Parse(Console.ReadLine());
 
             switch (input)
             {
                 case 1:
-                    currentSelection = input;
+                    currentSelection = input-1;
                     break;
                 case 2:
-                    currentSelection = input;
+                    currentSelection = input-1;
                     break;
                 case 3:
-                    currentSelection = input;
+                    currentSelection = input-1;
                     break;
                 case 4:
-                    currentSelection = input;
+                    currentSelection = input-1;
                     break;
                 case 5:
-                    currentSelection = input;
+                    currentSelection = input-1;
                     break;
                 default:
                     Console.WriteLine("Not a valid option. Please try again.");

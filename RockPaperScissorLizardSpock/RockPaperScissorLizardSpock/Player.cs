@@ -11,7 +11,7 @@ namespace RockPaperScissorLizardSpock
         public string name;
         public string typeOfPlayer;
         public int currentSelection;
-        public int numberOfWins;
+        public int numberOfRoundWins;
 
         public abstract void ChooseWeapon();
     }
