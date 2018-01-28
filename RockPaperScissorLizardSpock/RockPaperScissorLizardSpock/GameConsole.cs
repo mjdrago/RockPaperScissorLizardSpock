@@ -114,7 +114,23 @@ namespace RockPaperScissorLizardSpock
                 DisplayGameWinner(player2, player1);
             }
         }
-
+        public void AskToPlayAgain()
+        {
+            Console.WriteLine("Would you like to play again? Enter 'yes' or 'no'.");
+            string input = Console.ReadLine();
+            switch (input.ToLower())
+            {
+                case "yes":
+                    PlayGame();
+                    break;
+                case "no":
+                    break;
+                default:
+                    Console.WriteLine("That was not a valid entry. Please try again.");
+                    AskToPlayAgain();
+                    break;
+            }
+        }
         public void PlayGame()
         {
             GetNumberOfPlayers();
@@ -133,7 +149,7 @@ namespace RockPaperScissorLizardSpock
                 }
             }
             DetermineGameWinner();
-
+            AskToPlayAgain();
         }
     }
 }
