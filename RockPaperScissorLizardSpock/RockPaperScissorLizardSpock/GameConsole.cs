@@ -72,36 +72,6 @@ namespace RockPaperScissorLizardSpock
                 DeclareRoundWinner(player2, player1);
                 player2.numberOfRoundWins++;
             }
-            //if (player1.currentSelection == 1 && (player2.currentSelection == 3|| player2.currentSelection == 4))
-            //{
-            //    DeclareRoundWinner(player1,player2);
-            //    player1.numberOfWins++;
-            //}
-            //else if (player1.currentSelection == 2 && (player2.currentSelection == 1 || player2.currentSelection == 5))
-            //{
-            //    DeclareRoundWinner(player1, player2);
-            //    player1.numberOfWins++;
-            //}
-            //else if (player1.currentSelection == 3 && (player2.currentSelection == 2 || player2.currentSelection == 4))
-            //{
-            //    DeclareRoundWinner(player1, player2);
-            //    player1.numberOfWins++;
-            //}
-            //else if (player1.currentSelection == 4 && (player2.currentSelection == 5 || player2.currentSelection == 2))
-            //{
-            //    DeclareRoundWinner(player1, player2);
-            //    player1.numberOfWins++;
-            //}
-            //else if (player1.currentSelection == 5 && (player2.currentSelection == 3 || player2.currentSelection == 1))
-            //{
-            //    DeclareRoundWinner(player1, player2);
-            //    player1.numberOfWins++;
-            //}
-            //else
-            //{
-            //    DeclareRoundWinner(player2, player1);
-            //    player2.numberOfWins++;
-            //}
         }
 
         public void DisplayGameWinner(Player winner,Player loser)
